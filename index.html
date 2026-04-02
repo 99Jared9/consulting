@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jared — Consultant IA & Automatisation</title>
+<meta name="description" content="Consultant IA pour les entreprises — automatisation de processus, agents IA sur mesure et workflows intelligents. Résultats mesurables pour PME et ETI.">
+<meta property="og:title" content="Jared — Consultant IA & Automatisation">
+<meta property="og:description" content="Consultant IA pour PME et ETI — workflows intelligents, agents autonomes et intégrations sur mesure. Gains de temps et réduction des coûts mesurables.">
+<meta property="og:image" content="assets/img/project-crypto.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080c10'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='serif' font-size='20' font-weight='700' fill='%2300d4a0'%3EJ%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#080c10;--bg2:#0d1117;--bg3:#111820;--border:rgba(255,255,255,0.07);--border-h:rgba(255,255,255,0.13);--accent:#00d4a0;--accent2:#0087ff;--text:#e8edf2;--muted:#7a8a9e;--muted2:#7a8998;--badge-auto-color:#4da6ff;--badge-tool-color:#b47aff;--mono:'JetBrains Mono',monospace;--sans:'Space Grotesk',sans-serif;--nav-bg:rgba(8,12,16,0.85)}
+[data-theme="light"]{--bg:#f0f2f5;--bg2:#e8eaed;--bg3:#dfe1e5;--border:rgba(0,0,0,0.08);--border-h:rgba(0,0,0,0.15);--accent:#0b7d61;--accent2:#005fcc;--text:#1a1a1a;--muted:#505f72;--muted2:#445060;--badge-auto-color:#004aaa;--badge-tool-color:#6b21e8;--nav-bg:rgba(255,255,255,0.9)}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.65;overflow-x:hidden;transition:background-color .3s,color .3s}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");opacity:.025;pointer-events:none;z-index:0}
+body::after{content:'';position:fixed;inset:0;background-image:linear-gradient(var(--border) 1px,transparent 1px),linear-gradient(90deg,var(--border) 1px,transparent 1px);background-size:60px 60px;opacity:.4;pointer-events:none;z-index:0}
+.glow-orb{position:fixed;border-radius:50%;pointer-events:none;z-index:0;filter:blur(80px)}
+.glow-orb.a{width:500px;height:500px;background:radial-gradient(circle,rgba(0,212,160,.08) 0%,transparent 70%);top:-100px;left:-100px}
+.glow-orb.b{width:400px;height:400px;background:radial-gradient(circle,rgba(0,135,255,.06) 0%,transparent 70%);bottom:10%;right:-80px}
+.wrap{max-width:820px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--nav-bg);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:background-color .3s,border-color .3s}
+nav .inner{max-width:820px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:52px}
+nav .logo{font-family:var(--mono);font-size:13px;color:var(--accent);letter-spacing:.05em}
+nav ul{list-style:none;display:flex;gap:28px}
+nav a{font-size:13px;color:var(--muted);text-decoration:none;letter-spacing:.03em;transition:color .2s}
+nav a:hover{color:var(--text)}
+.theme-toggle{background:none;border:1px solid var(--border);border-radius:6px;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;width:32px;height:32px;padding:0;flex-shrink:0;transition:all .2s}
+.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.theme-toggle .icon-sun{display:none}
+.theme-toggle .icon-moon{display:block}
+[data-theme="light"] .theme-toggle .icon-sun{display:block}
+[data-theme="light"] .theme-toggle .icon-moon{display:none}
+#hero{min-height:100vh;display:flex;align-items:center;padding-top:52px}
+.hero-inner{padding-top:80px;padding-bottom:80px}
+.eyebrow{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--accent)}
+h1{font-size:clamp(40px,7vw,72px);font-weight:600;line-height:1.05;letter-spacing:-.03em;margin-bottom:24px}
+h1 .dim{color:var(--muted);font-weight:300}
+.hero-sub{font-size:17px;color:var(--muted);max-width:520px;line-height:1.7;margin-bottom:40px}
+.hero-sub strong{color:var(--text);font-weight:500}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:6px;font-size:14px;font-weight:500;text-decoration:none;transition:all .2s;font-family:var(--sans);cursor:pointer;border:none}
+.btn-primary{background:var(--accent);color:#04201a}
+.btn-primary:hover{background:#00edb4;transform:translateY(-1px)}
+.btn-ghost{background:transparent;border:1px solid var(--border-h);color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-1px)}
+.stack-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:48px}
+.pill{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--border);border-radius:4px;padding:4px 10px;letter-spacing:.04em;transition:all .2s}
+.pill:hover{border-color:var(--accent);color:var(--accent)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.fade-up{animation:fadeUp .6s ease both}
+.delay-1{animation-delay:.1s}
+.delay-2{animation-delay:.2s}
+.delay-3{animation-delay:.3s}
+.delay-4{animation-delay:.4s}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+</style>
+<link rel="preload" href="assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+<script>(function(){var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme:light)').matches?'light':'dark');document.documentElement.setAttribute('data-theme',t);})();</script>
+</head>
+<body>
+
+<a href="#hero" class="skip-link">Aller au contenu principal</a>
+
+<div class="glow-orb a" aria-hidden="true"></div>
+<div class="glow-orb b" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav aria-label="Navigation principale">
+  <div class="inner">
+    <a href="#hero" class="logo" aria-label="Jared, retour en haut de page">jared.dev</a>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Réalisations</a></li>
+      <li><a href="#reports">Publications</a></li>
+      <li><a href="#contact">Appel stratégique</a></li>
+      <li><a href="#contact-mail">Contact</a></li>
+    </ul>
+    <button class="theme-toggle" aria-label="Basculer le thème" data-action="toggle-theme">
+      <svg class="icon-moon" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <svg class="icon-sun" aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="hero" aria-label="Présentation">
+  <div class="wrap hero-inner">
+    <p class="eyebrow fade-up">Formateur & Consultant IA</p>
+    <h1 class="fade-up delay-1">
+      Jared<br>
+      <span class="dim">L'IA concrète pour vos équipes</span>
+    </h1>
+    <p class="hero-sub fade-up delay-2">
+      J'interviens en PME et ETI pour <strong>initier vos collaborateurs à l'intelligence artificielle</strong> et leur remettre des solutions immédiatement utilisables — pas de théorie abstraite, uniquement ce qui change le quotidien.
+    </p>
+    <div class="cta-row fade-up delay-3">
+      <a href="#services" class="btn btn-primary">Voir mes services</a>
+      <a href="#contact" class="btn btn-ghost">Appel gratuit 30 min</a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <p class="section-label" aria-hidden="true">01 — Services</p>
+    <h2 id="services-title">Comment ça se passe</h2>
+    <p class="section-intro">Un processus en trois étapes, conçu pour s'adapter à vos équipes — pas l'inverse.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.64 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.55 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3 class="service-title">1 — Appel découverte gratuit</h3>
+        <p class="service-desc">30 minutes sans engagement pour comprendre les besoins réels de vos équipes, leurs habitudes de travail et les problèmes qu'elles rencontrent au quotidien.</p>
+        <ul class="service-list">
+          <li>Échange téléphonique ou visio</li>
+          <li>Identification des priorités</li>
+          <li>Gratuit, sans engagement</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><polyline points="9 21 9 9"/></svg>
+        </div>
+        <h3 class="service-title">2 — Présentation sur mesure</h3>
+        <p class="service-desc">Je conçois une présentation adaptée à votre contexte avec des solutions personnalisées, directement actionnables par vos collaborateurs.</p>
+        <ul class="service-list">
+          <li>Sélection des outils adaptés à vos usages</li>
+          <li>Solutions concrètes, pas de théorie</li>
+          <li>Présentation claire pour décider sereinement</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="service-title">3 — Demi-journée en entreprise</h3>
+        <p class="service-desc">J'interviens directement dans vos locaux pour former vos équipes à l'IA et leur présenter les solutions complètes et personnalisées prêtes à l'emploi.</p>
+        <ul class="service-list">
+          <li>Formation pratique, prise en main immédiate</li>
+          <li>Démonstrations sur vos cas d'usage réels</li>
+          <li>Chaque collaborateur repart avec ses outils</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" aria-labelledby="projects-title">
+  <div class="wrap">
+    <p class="section-label" aria-hidden="true">02 — Réalisations</p>
+    <h2 id="projects-title">Exemples de réalisations IA</h2>
+    <p class="section-intro">Des systèmes conçus pour économiser plusieurs heures de travail par semaine — le type de solutions que je construis pour les équipes que j'accompagne.</p>
+    <div class="project-grid" id="project-grid" aria-live="polite" aria-label="Liste des projets"></div>
+    <p class="project-error" id="project-error" role="alert" hidden>Impossible de charger les projets.</p>
+  </div>
+</section>
+
+<!-- RAPPORTS IA -->
+<section id="reports" aria-labelledby="reports-title">
+  <div class="wrap">
+    <p class="section-label" aria-hidden="true">03 — Publications</p>
+    <h2 id="reports-title">Veille IA pour les décideurs</h2>
+    <p class="section-intro">Une série de rapports pour comprendre l'IA sans jargon — des fondamentaux aux applications concrètes en entreprise. Téléchargeables librement.</p>
+    <div class="report-list">
+
+      <div class="report-row">
+        <div class="report-num">01</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Introduction aux LLMs</h3>
+              <div class="report-row-meta">14 jan. 2026 &nbsp;·&nbsp; Théorie</div>
+            </div>
+            <a href="rapport-01.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Introduction aux LLMs">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Comment fonctionne un LLM, tokenisation, vectorisation, mécanisme d'attention, et panorama des principaux modèles (GPT, Claude, Gemini). Quel modèle choisir selon la tâche.</p>
+          <div class="tag-row">
+            <span class="tag">LLM</span>
+            <span class="tag">Transformer</span>
+            <span class="tag">Tokens</span>
+            <span class="tag">Attention</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">02</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Maîtriser le Prompt Engineering</h3>
+              <div class="report-row-meta">21 jan. 2026 &nbsp;·&nbsp; Pratique</div>
+            </div>
+            <a href="rapport-02.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Maîtriser le Prompt Engineering">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">System prompt, zero-shot, few-shot, Chain-of-Thought, Tree of Thoughts, meta prompting. Structure complète d'un prompt optimisé et techniques avancées appliquées à l'investissement.</p>
+          <div class="tag-row">
+            <span class="tag">Prompt Engineering</span>
+            <span class="tag">CoT</span>
+            <span class="tag">ToT</span>
+            <span class="tag">System Prompt</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">03</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Maîtriser le Context Engineering</h3>
+              <div class="report-row-meta">28 jan. 2026 &nbsp;·&nbsp; Pratique</div>
+            </div>
+            <a href="rapport-03.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Maîtriser le Context Engineering">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">RAG, mémoire à long terme, et présentation de NotebookLM — l'outil le plus sous-coté pour apprendre et synthétiser n'importe quel sujet. Podcasts, vidéos et cartes mentales générés par IA.</p>
+          <div class="tag-row">
+            <span class="tag">Context Engineering</span>
+            <span class="tag">RAG</span>
+            <span class="tag">NotebookLM</span>
+            <span class="tag">Gemini</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">04</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Introduction à l'automatisation</h3>
+              <div class="report-row-meta">04 fév. 2026 &nbsp;·&nbsp; Pratique</div>
+            </div>
+            <a href="rapport-04.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Introduction à l'automatisation">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Présentation de n8n, hébergement local, premiers pas avec les nœuds et triggers. Pourquoi l'automatisation par IA change radicalement les règles du jeu en 2026.</p>
+          <div class="tag-row">
+            <span class="tag">n8n</span>
+            <span class="tag">Automatisation</span>
+            <span class="tag">Workflows</span>
+            <span class="tag">Agents IA</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">05</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Introduction aux World Models</h3>
+              <div class="report-row-meta">10 fév. 2026 &nbsp;·&nbsp; Théorie</div>
+            </div>
+            <a href="rapport-05.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Introduction aux World Models">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Limites des LLMs pour l'AGI, paradoxe de Moravec, fonctionnement des World Models (Vision / Mémoire / Contrôleur), et panorama des modèles disponibles : Marble, Genie 3, GAIA-A.</p>
+          <div class="tag-row">
+            <span class="tag">World Models</span>
+            <span class="tag">AGI</span>
+            <span class="tag">Robotique</span>
+            <span class="tag">Genie 3</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">06</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Les Risques liés à l'AGI</h3>
+              <div class="report-row-meta">18 fév. 2026 &nbsp;·&nbsp; Théorie</div>
+            </div>
+            <a href="rapport-06.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Les Risques liés à l'AGI">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Risques d'alignement, utilisation malveillante (armes biologiques, monopoles étatiques), et risques socio-économiques : substitution massive du travail, concentration des richesses. Basé sur AI 2027 et l'essai de Dario Amodei.</p>
+          <div class="tag-row">
+            <span class="tag">AGI</span>
+            <span class="tag">Alignement</span>
+            <span class="tag">Emploi</span>
+            <span class="tag">Géopolitique</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">07</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Projet n8n n°1 — Newsletter Fondamentale depuis Telegram</h3>
+              <div class="report-row-meta">25 fév. 2026 &nbsp;·&nbsp; Projet</div>
+            </div>
+            <a href="rapport-07.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Projet n8n n°1, Newsletter Fondamentale depuis Telegram">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Tutoriel pas à pas pour construire un workflow n8n complet : scraping de canaux Telegram publics via HTTP Request, extraction HTML, filtrage par date, agrégation, synthèse IA et envoi automatique d'une newsletter quotidienne par mail.</p>
+          <div class="tag-row">
+            <span class="tag">n8n</span>
+            <span class="tag">Telegram</span>
+            <span class="tag">HTTP Request</span>
+            <span class="tag">LLM Chain</span>
+            <span class="tag">Gmail</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">08</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Les Bénéfices liés à l'AGI</h3>
+              <div class="report-row-meta">25 fév. 2026 &nbsp;·&nbsp; Théorie</div>
+            </div>
+            <a href="rapport-08.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Les Bénéfices liés à l'AGI">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Contrepoint au rapport n°6 : révolution médicale (cancer, Alzheimer, vieillissement), explosion de la recherche scientifique, abondance économique et impact sur la démocratie. Basé sur l'essai "Machines of Loving Grace" de Dario Amodei.</p>
+          <div class="tag-row">
+            <span class="tag">AGI</span>
+            <span class="tag">Santé</span>
+            <span class="tag">Économie</span>
+            <span class="tag">Démocratie</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="report-row">
+        <div class="report-num">09</div>
+        <div class="report-body">
+          <div class="report-row-header">
+            <div>
+              <h3 class="report-row-title">Le Model Context Protocol (MCP)</h3>
+              <div class="report-row-meta">25 fév. 2026 &nbsp;·&nbsp; Pratique</div>
+            </div>
+            <a href="rapport-09.pdf" download class="btn-dl" aria-label="Télécharger le PDF — Le Model Context Protocol (MCP)">
+              <svg aria-hidden="true" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              PDF
+            </a>
+          </div>
+          <p class="report-row-desc">Introduction aux agents IA et au Model Context Protocol : comment le MCP (l'"USB-C de l'IA") résout le problème M×N de l'intégration traditionnelle, mise en pratique avec n8n et Zapier MCP, et implications pour l'internet de demain.</p>
+          <div class="tag-row">
+            <span class="tag">MCP</span>
+            <span class="tag">Agents IA</span>
+            <span class="tag">n8n</span>
+            <span class="tag">Zapier</span>
+            <span class="tag">Intégration</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <p class="section-label" aria-hidden="true">04 — Appel stratégique</p>
+    <div class="contact-inner">
+      <h2 id="contact-title">Organisons un appel de 30 minutes</h2>
+      <p>Vous voulez que vos équipes adoptent l'IA sans résistance ni perte de temps ? Écrivez-moi — après un premier échange gratuit de 30 minutes, je vous propose un format adapté sous 48h.</p>
+      <p>Sans engagement. Je commence toujours par comprendre vos enjeux avant de proposer quoi que ce soit.</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/contact-9jared99/30min?text_color=000000" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact-mail" aria-labelledby="contact-mail-title">
+  <div class="wrap">
+    <p class="section-label" aria-hidden="true">05 — Contact</p>
+    <div class="contact-inner">
+      <h2 id="contact-mail-title">Une question avant de réserver ?</h2>
+      <p>Pour toute question supplémentaire, copiez mon adresse et envoyez-moi un message. Je réponds sous 24h.</p>
+      <button type="button" data-action="copy-email" class="contact-link" aria-label="Copier l'adresse e-mail — contact.9jared99@gmail.com">
+        <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+        <span class="copy-label">contact.9jared99@gmail.com</span>
+        <span class="arrow" aria-hidden="true">→</span>
+      </button>
+      <p id="copy-status" class="sr-only" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="inner">
+    <p>© 2026 Jared</p>
+    <div class="footer-right">
+      <p>Construit avec Claude Code</p>
+      <a href="https://github.com/99Jared9/99Jared9.github.io" target="_blank" rel="noopener noreferrer" class="footer-gh-link" aria-label="Voir le code source sur GitHub (s'ouvre dans un nouvel onglet)">
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
