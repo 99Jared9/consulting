@@ -81,18 +81,18 @@ document.addEventListener('DOMContentLoaded', function() {
     copyBtn.addEventListener('click', function() {
       const status = document.getElementById('copy-status');
       const label = copyBtn.querySelector('.copy-label');
-      const originalText = label ? label.textContent : '';
-      navigator.clipboard.writeText('contact@jaredconsulting.com').then(function() {
+      const email = label ? label.textContent.trim() : '';
+      navigator.clipboard.writeText(email).then(function() {
         if (status) status.textContent = 'Adresse e-mail copiée !';
         if (label) label.textContent = 'Copié !';
         copyBtn.classList.add('is-copied');
         setTimeout(function() {
           if (status) status.textContent = '';
-          if (label) label.textContent = originalText;
+          if (label) label.textContent = email;
           copyBtn.classList.remove('is-copied');
         }, 2000);
       }).catch(function() {
-        if (status) status.textContent = 'Impossible de copier — adresse : contact@jaredconsulting.com';
+        if (status) status.textContent = 'Impossible de copier — adresse : ' + email;
         setTimeout(function() { if (status) status.textContent = ''; }, 4000);
       });
     });
